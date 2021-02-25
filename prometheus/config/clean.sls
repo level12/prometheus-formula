@@ -26,6 +26,6 @@ prometheus-config-clean-{{ name }}:
   group.absent:
     - name: {{ name }}
     - require:
-       - {{ sls_config_clean }}
+       - {{ sls_service_clean }}
 
     {%- endfor %}
