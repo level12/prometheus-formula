@@ -11,6 +11,7 @@ include:
     {%- for name in p.wanted.component %}
 
 prometheus-config-clean-{{ name }}:
+  file.absent:
     - names:
       - {{ p.dir.etc }}{{ p.div }}{{ name }}.yml
       - {{ p.pkg.component[name]['environ_file'] }}
