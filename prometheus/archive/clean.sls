@@ -34,8 +34,6 @@ prometheus-archive-clean-{{ name }}-file-symlink-{{ cmd }}:
     - require:
       - sls: {{ sls_alternatives_clean }}
       - sls: {{ sls_service_clean }}
-    - require_in:
-      - user: prometheus-archive-clean-{{ name }}-user-group
 
                 {%- endfor %}
             {%- endif %}
